@@ -280,8 +280,8 @@ def run_agent(
     #verify_ssl = os.getenv("SPLUNK_VERIFY_SSL", "true").strip().lower() in {"1", "true", "yes"}
     #splunk_username = os.getenv("SPLUNK_USERNAME")
     #splunk_password = os.getenv("SPLUNK_PASSWORD")
-    splunk_token = os.getenv("SPLUNK_TOKEN")
-   
+    #splunk_token = os.getenv("SPLUNK_TOKEN")
+    splunk_token = "eyJraWQiOiJzcGx1bmsuc2VjcmV0IiwiYWxnIjoiSFM1MTIiLCJ2ZXIiOiJ2MiIsInR0eXAiOiJzdGF0aWMifQ.eyJpc3MiOiJweWVtYWthciBmcm9tIHJlZGN1YmUiLCJzdWIiOiJweWVtYWthciIsImF1ZCI6ImF1dG9tYXRpb24iLCJpZHAiOiJTQU1MOi8vc2FtbCIsImp0aSI6IjUwMjFiOTQwYjgzMzVkNWIwODM2N2Q3MzZlYWI5MjdiYmM4MmU2NmVlMGYxMGE0NjJmZDUzNmJlMzZkYTM2OTQiLCJpYXQiOjE3NzQ1MDIwMDYsImV4cCI6MTc3NjIzMDAwNiwibmJyIjoxNzc0NzYxMjA2fQ.rL4hO-YvVDSxzz79GbmUcuzjUzDf9ANHYOIMz1obvf8eeFNP0EOLpRKLJsWo1ZunBI1JidCE3MfhKVZLarWnuA"
 
     spl = generate_spl(
         question=question,

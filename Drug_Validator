@@ -1,0 +1,17 @@
+# Import Guard and Validator
+from guardrails import Guard
+from guardrails.hub import MentionsDrugs
+
+# Setup the Guard with the validator
+guard = Guard().use(MentionsDrugs, on_fail="exception")
+
+# Test passing response
+guard.validate("You should take this medicine every day after breakfast.")
+
+# Test failing response
+try:
+    response = guard.validate(
+        "Take one dose of aspirin each night before going to sleep."
+    )
+except Exception as e:
+    print(e)
