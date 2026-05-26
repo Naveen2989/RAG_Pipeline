@@ -15,7 +15,7 @@ load_dotenv("api.env")
 def get_weather(location: str) -> str:
     """Get current weather for a given city."""
     
-    api_key = os.getenv("WEATHER_API_KEY")   
+    api_key = os.getenv("WEATHER_API_KEY")
     if not api_key:
         return "Weather API key is missing."
 
@@ -63,7 +63,7 @@ def rag_tool(question: str) -> str:
     api_key = os.getenv("PINECONE_API_KEY")
     pc = Pinecone(api_key=api_key)
 
-    index = pc.Index("knowledge-repo")
+    index = pc.Index("hotelknowledgebase")
 
     embedding_model = OllamaEmbeddings(model="nomic-embed-text")
 
